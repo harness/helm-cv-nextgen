@@ -3,16 +3,16 @@ entries:
   cv-nextgen:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-08-10T16:35:15.37968+05:30"
+    created: "2022-08-11T02:06:27.903989+05:30"
     dependencies:
     - name: harness-common
       repository: https://harness.github.io/helm-common/charts
-      version: 0.1.0
+      version: 0.1.1
     description: A Helm chart for Kubernetes
-    digest: d72cf2bb945a9501be41c92c259be5ea57c02802c4e6955e476f6a98ac7386ba
+    digest: 7f4f03ae4dd6c9a0b2711e6e6a9ebd23a50da66423bfac7764783b44c528476e
     name: cv-nextgen
     type: application
     urls:
     - cv-nextgen-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-10T16:35:15.378378+05:30"
+generated: "2022-08-11T02:06:27.902787+05:30"

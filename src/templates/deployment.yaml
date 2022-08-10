@@ -35,7 +35,7 @@ spec:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
         - name: cv-nextgen
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: {{ include "harnesscommon.names.imagename" . }}
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           securityContext:
               {{- toYaml .Values.securityContext | nindent 12 }}

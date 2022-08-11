@@ -13,7 +13,7 @@ data:
   STACK_DRIVER_LOGGING_ENABLED: "false"
   VERIFICATION_PORT: "6060"
   VERIFICATION_SERVICE_SECRET: 59MR5RlVARcdH7zb7pNx6GzqiglBmXR8
-  NOTIFICATION_BASE_URL: '{{ .Values.global.loadbalancerURL }}/notifications/api/'
+  NOTIFICATION_BASE_URL: 'http://platform-service.{{ .Release.Namespace }}.svc.cluster.local:9005/api/'
   SHOULD_CONFIGURE_WITH_NOTIFICATION: "true"
   PORTAL_URL: '{{ .Values.global.loadbalancerURL }}/api/'
   MANAGER_CLIENT_BASEURL: '{{ .Values.global.loadbalancerURL }}/'

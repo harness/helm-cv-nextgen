@@ -78,7 +78,7 @@ spec:
             - name: cv
               containerPort: {{.Values.service.port}}
               protocol: "TCP"
-            - name: cv-ng-grpc
+            - name: grpc-cv-ng
               containerPort: {{.Values.service.grpcport}}
               protocol: "TCP"      
       affinity:

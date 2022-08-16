@@ -11,7 +11,7 @@ spec:
       port: {{.Values.service.port}}
       protocol: TCP
       targetPort: {{.Values.service.port}}
-    - name: cv-nextgen-grpc
+    - name: grpc-cv-nextgen
       port: {{.Values.service.grpcport}}
       protocol: TCP
       targetPort: {{.Values.service.grpcport}}

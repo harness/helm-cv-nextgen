@@ -9,10 +9,12 @@ maxSurge: 1
 maxUnavailable: 0
 
 image:
+  registry: docker.io
   repository: harness/cv-nextgen-signed
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "76019"
+  digest: ""
 
 java:
   memory: 4096
@@ -36,7 +38,7 @@ podAnnotations: {}
 podSecurityContext: {}
   # fsGroup: 2000
 
-securityContext: 
+securityContext:
   runAsUser: 65534
   runAsNonRoot: true
   # capabilities:
@@ -71,4 +73,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-

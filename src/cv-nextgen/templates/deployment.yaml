@@ -43,13 +43,13 @@ spec:
             - name: MONGODB_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: harness-secrets
-                  key: mongodbUsername
+                  name: {{ .Values.mongoSecrets.userName.name }}
+                  key: {{ .Values.mongoSecrets.userName.key }}
             - name: MONGODB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: harness-secrets
-                  key: mongodbPassword
+                  name: {{ .Values.mongoSecrets.password.name }}
+                  key: {{ .Values.mongoSecrets.password.key }}
             - name: MONGO_URI
               value: {{ include "harnesscommon.database.mongo" (dict "database" "cvng-harness" "context" $) }}
             - name : NOTIFICATION_MONGO_URI

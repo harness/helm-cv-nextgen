@@ -3,24 +3,7 @@ entries:
   cv-nextgen:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2022-08-23T11:38:37.98674+05:30"
-    dependencies:
-    - name: common
-      repository: https://charts.bitnami.com/bitnami
-      version: 2.x.x
-    - name: harness-common
-      repository: https://harness.github.io/helm-common
-      version: 1.x.x
-    description: A Helm chart for Kubernetes
-    digest: 9600e9ef02b905536671dce1433688c3b7b71d49adecedb0dcace0d6980bf25e
-    name: cv-nextgen
-    type: application
-    urls:
-    - cv-nextgen-0.2.1.tgz
-    version: 0.2.1
-  - apiVersion: v2
-    appVersion: 0.0.1
-    created: "2022-08-23T11:38:37.984852+05:30"
+    created: "2022-08-18T01:34:31.197391+05:30"
     dependencies:
     - name: harness-common
       repository: https://harness.github.io/helm-common/charts
@@ -32,4 +15,4 @@ entries:
     urls:
     - cv-nextgen-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-23T11:38:37.982615+05:30"
+generated: "2022-08-18T01:34:31.195479+05:30"

@@ -24,6 +24,14 @@ mongoSecrets:
     name: harness-secrets
     key: mongodbPassword
 
+waitForInitContainer:
+  image:
+    registry: docker.io
+    repository: harness/helm-init-container
+    pullPolicy: IfNotPresent
+    tag: "latest"
+    digest: ""
+
 java:
   memory: 4096
 

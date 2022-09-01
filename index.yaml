@@ -3,6 +3,20 @@ entries:
   cv-nextgen:
   - apiVersion: v2
     appVersion: 0.0.1
+    created: "2022-09-01T12:37:21.463208064Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: d686e3f4f9667acefbd4eabffc48d571c916192fd08a6ba2dfbeca9396249259
+    name: cv-nextgen
+    type: application
+    urls:
+    - https://github.com/harness/helm-cv-nextgen/releases/download/cv-nextgen-0.2.11/cv-nextgen-0.2.11.tgz
+    version: 0.2.11
+  - apiVersion: v2
+    appVersion: 0.0.1
     created: "2022-08-29T19:50:20.115779354Z"
     dependencies:
     - name: common
@@ -171,4 +185,4 @@ entries:
     urls:
     - https://github.com/harness/helm-cv-nextgen/releases/download/cv-nextgen-0.1.0/cv-nextgen-0.1.0.tgz
     version: 0.1.0
-generated: "2022-08-29T19:50:20.115819755Z"
+generated: "2022-09-01T12:37:21.463466481Z"

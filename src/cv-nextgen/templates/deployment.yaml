@@ -72,15 +72,20 @@ spec:
             httpGet:
               path: /cv/api/health
               port: cv
-            initialDelaySeconds: 60
             periodSeconds: 5
+            failureThreshold: 5
           livenessProbe:
             httpGet:
               path: /cv/api/health
               port: cv
-            initialDelaySeconds: 300
             periodSeconds: 10
-            failureThreshold: 2
+            failureThreshold: 5
+          startupProbe:
+            httpGet:
+              path: /cv/api/health
+              port: cv
+            periodSeconds: 10
+            failureThreshold: 25
           ports:
             - name: cv
               containerPort: {{.Values.service.port}}

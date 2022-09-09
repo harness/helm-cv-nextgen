@@ -8,7 +8,7 @@ data:
   ENV: KUBERNETES_ONPREM
   LOGGING_LEVEL: {{ .Values.appLogLevel }}
   MANAGER_URL: http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/api/
-  NG_MANAGER_URL: http://ng-manager.{{ .Release.Namespace }}.svc.cluster.local:7090/api/
+  NG_MANAGER_URL: http://ng-manager.{{ .Release.Namespace }}.svc.cluster.local:7090/
   MEMORY: {{ .Values.java.memory | quote }}
   STACK_DRIVER_LOGGING_ENABLED: "false"
   VERIFICATION_PORT: "6060"

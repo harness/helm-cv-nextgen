@@ -68,19 +68,7 @@ spec:
                 name: cv-nextgen
           resources:
               {{- toYaml .Values.resources | nindent 12 }}
-          readinessProbe:
-            httpGet:
-              path: /cv/api/health
-              port: cv
-            initialDelaySeconds: 60
-            periodSeconds: 5
-          livenessProbe:
-            httpGet:
-              path: /cv/api/health
-              port: cv
-            initialDelaySeconds: 300
-            periodSeconds: 10
-            failureThreshold: 2
+          {{- toYaml .Values.probes | nindent 10}}
           ports:
             - name: cv
               containerPort: {{.Values.service.port}}

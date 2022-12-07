@@ -7,7 +7,7 @@ data:
   DEPLOY_MODE: KUBERNETES_ONPREM
   ENV: KUBERNETES_ONPREM
   LOGGING_LEVEL: {{ .Values.appLogLevel }}
-  MANAGER_URL: http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/
+  MANAGER_URL: http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/api/
   NG_MANAGER_URL: http://ng-manager.{{ .Release.Namespace }}.svc.cluster.local:7090/
   MEMORY: {{ .Values.java.memory | quote }}
   STACK_DRIVER_LOGGING_ENABLED: "false"
@@ -15,8 +15,8 @@ data:
   VERIFICATION_SERVICE_SECRET: 59MR5RlVARcdH7zb7pNx6GzqiglBmXR8
   NOTIFICATION_BASE_URL: http://platform-service.{{ .Release.Namespace }}.svc.cluster.local:9005/api/
   SHOULD_CONFIGURE_WITH_NOTIFICATION: "true"
-  PORTAL_URL: http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/
-  MANAGER_CLIENT_BASEURL: http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/
+  PORTAL_URL: {{ .Values.global.loadbalancerUrl }}
+  MANAGER_CLIENT_BASEURL: http://harness-manager.{{ .Release.Namespace }}.svc.cluster.local:9090/api/
   EVENTS_FRAMEWORK_REDIS_URL: 'redis://localhost:6379'
   EVENTS_FRAMEWORK_USE_SENTINEL: "true"
   EVENTS_FRAMEWORK_SENTINEL_MASTER_NAME: 'harness-redis'
